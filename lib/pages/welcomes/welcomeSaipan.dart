@@ -82,7 +82,10 @@ class WelcomeSaipan extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => userHome()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => userHome(),
+                        ));
                   },
                   child: Container(
                     decoration: BoxDecoration(

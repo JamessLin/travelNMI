@@ -1,3 +1,4 @@
+import 'package:app/pages/homepage.dart';
 import 'package:app/pages/welcomes/welcomeRota.dart';
 import 'package:app/pages/welcomes/welcomeSaipan.dart';
 import 'package:app/pages/welcomes/welcomeTinian.dart';
@@ -12,13 +13,12 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(controller: _controller,
-      scrollDirection: Axis.horizontal,
-      children: [
-        WelcomeSaipan(),
-        WelcomeTinian(),
-        WelcomeRota(),
-      ],
+      body: PageView(
+        controller: _controller,
+        scrollDirection: Axis.horizontal,
+        children: [
+          WelcomeSaipan(),
+        ],
       ),
     );
   }

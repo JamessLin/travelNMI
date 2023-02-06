@@ -144,9 +144,9 @@ class selectedDetails extends StatelessWidget {
                 child: Text(
                   this.subCategory.description,
                   style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 15.0,
-                      fontFamily: 'Poppins'),
+                    fontWeight: FontWeight.normal,
+                    fontSize: 16.0,
+                  ),
                   textAlign: TextAlign.left,
                 ),
               ),

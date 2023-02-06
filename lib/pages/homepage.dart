@@ -4,6 +4,7 @@ import 'package:app/pages/island/islandDetails.dart';
 import 'package:app/pages/map.dart';
 import 'package:app/pages/search.dart';
 import 'package:app/pages/settings.dart';
+import 'package:app/pages/welcomes/welcome.dart';
 import 'package:app/util/model/saipan.dart';
 import 'package:app/util/places.dart';
 import 'package:app/widgets/slider2.dart';
@@ -11,6 +12,8 @@ import 'package:app/widgets/slider3.dart';
 import 'package:app/widgets/verticle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../util/model/selectedPlace.dart';
