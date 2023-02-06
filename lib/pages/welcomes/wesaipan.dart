@@ -2,14 +2,14 @@ import 'package:app/main.dart';
 import 'package:app/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeTinian extends StatelessWidget {
+class wesaipan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
           Image.asset(
-            'assets/images/island/tinian.jpg',
+            'assets/images/Places/managaha.jpg',
             fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,
@@ -45,7 +45,7 @@ class WelcomeTinian extends StatelessWidget {
             padding: EdgeInsets.only(top: 200),
             alignment: Alignment.topCenter,
             child: Text(
-              "Tinian",
+              "Saipan",
               style: TextStyle(
                   fontSize: 50,
                   color: Colors.white70,
@@ -60,7 +60,7 @@ class WelcomeTinian extends StatelessWidget {
               padding:
                   EdgeInsets.only(top: 80, bottom: 20, left: 20, right: 20),
               child: Text(
-                "Tinian is a small island located in the Northern Mariana Islands in the Pacific Ocean. It is famous for its role as a key base during World War II, with several historic sites and monuments scattered throughout the island. Tinian is also known for its stunning beaches, crystal-clear waters, and rich marine life, making it a popular destination for snorkeling, diving, and other water activities. Visitors to Tinian can explore its rich history and cultural heritage by visiting museums, war memorials, and other historic sites, or simply relaxing on its beautiful beaches and enjoying the island's warm and welcoming atmosphere. The local community is proud of Tinian's history and heritage, and is eager to share it with visitors, making Tinian a truly unique and unforgettable travel destination.",
+                "Saipan is a small island located in the Northern Mariana Islands in the Pacific Ocean. It is known for its stunning beaches, lush tropical forests, and rich cultural heritage. The indigenous people of Saipan are the Chamorros, who have a long and fascinating history on the island. Today, the Chamorro culture continues to thrive on Saipan, and is celebrated through festivals, traditional dances, and other cultural events. Visitors to Saipan can experience the island's rich cultural heritage by visiting museums, participating in cultural tours, or simply exploring the local villages and communities. The warm and friendly locals are proud of their heritage and are happy to share it with visitors, making Saipan a truly authentic and unique travel destination.",
                 style: TextStyle(
                     fontSize: 13,
                     color: Colors.white70,

@@ -2,6 +2,7 @@ import 'package:app/pages/homepage.dart';
 import 'package:app/pages/welcomes/welcomeRota.dart';
 import 'package:app/pages/welcomes/welcomeSaipan.dart';
 import 'package:app/pages/welcomes/welcomeTinian.dart';
+import 'package:app/pages/welcomes/wesaipan.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -17,6 +18,9 @@ class Welcome extends StatelessWidget {
         controller: _controller,
         scrollDirection: Axis.horizontal,
         children: [
+          wesaipan(),
+          WelcomeTinian(),
+          WelcomeRota(),
           WelcomeSaipan(),
         ],
       ),
