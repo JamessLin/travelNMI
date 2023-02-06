@@ -6,14 +6,22 @@ import 'package:app/util/places.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:translator/translator.dart';
 
-class selectedDetails extends StatelessWidget {
+class selectedDetails extends StatefulWidget {
   Category subCategory;
-  List<Category> categories = Saipan.getMockCategories();
+
   selectedDetails({
     super.key,
     required this.subCategory,
   });
+
+  @override
+  State<selectedDetails> createState() => _selectedDetailsState();
+}
+
+class _selectedDetailsState extends State<selectedDetails> {
+  List<Category> categories = Saipan.getMockCategories();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +38,7 @@ class selectedDetails extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Image.asset(
-                  this.subCategory.imageUrl,
+                  this.widget.subCategory.imageUrl,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -65,27 +73,15 @@ class selectedDetails extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      this.subCategory.name,
-                      style: TextStyle(
+                      this.widget.subCategory.name,
+                      style: const TextStyle(
                         fontWeight: FontWeight.w700,
-                        fontSize: 20,
+                        fontSize: 30,
                       ),
                       maxLines: 2,
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  // IconButton(
-                  //   icon: Icon(
-                  //     Icons.g,
-                  //   ),
-                  //   onPressed: () => Navigator.of(context).push(
-                  //     MaterialPageRoute(
-                  //       builder: (BuildContext context) {
-                  //         return MapPage();
-                  //       },
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
               Row(
@@ -99,7 +95,7 @@ class selectedDetails extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      this.subCategory.location,
+                      this.widget.subCategory.location,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
@@ -139,11 +135,12 @@ class selectedDetails extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10.0),
+
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  this.subCategory.description,
-                  style: TextStyle(
+                  this.widget.subCategory.description,
+                  style: const TextStyle(
                     fontWeight: FontWeight.normal,
                     fontSize: 16.0,
                   ),

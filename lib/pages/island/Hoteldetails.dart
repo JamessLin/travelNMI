@@ -4,6 +4,7 @@ import 'package:app/util/places.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class hotelDetails extends StatelessWidget {
   const hotelDetails({super.key, required this.place});
@@ -146,17 +147,17 @@ class hotelDetails extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-          child: Icon(
-            Icons.map_outlined,
-          ),
-          onPressed: () => Navigator.of(context).push(
+        child: Icon(
+          Icons.map_outlined,
+        ),
+        onPressed: () => Navigator.of(context).push(
           MaterialPageRoute(
             builder: (BuildContext context) {
               return MapPage();
             },
           ),
         ),
-        ),
+      ),
     );
   }
 
@@ -184,6 +185,27 @@ class hotelDetails extends StatelessWidget {
             ),
           );
         },
+      ),
+    );
+  }
+}
+
+class BarIndicator extends StatelessWidget {
+  const BarIndicator({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(15),
+      child: Container(
+        width: 40,
+        height: 4,
+        decoration: BoxDecoration(
+          color: Color.fromARGB(144, 0, 0, 0),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        ),
       ),
     );
   }
