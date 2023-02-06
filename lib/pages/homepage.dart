@@ -1,10 +1,13 @@
 import 'dart:ui';
 
 import 'package:app/pages/island/islandDetails.dart';
+import 'package:app/pages/map.dart';
 import 'package:app/pages/search.dart';
 import 'package:app/pages/settings.dart';
 import 'package:app/util/model/saipan.dart';
 import 'package:app/util/places.dart';
+import 'package:app/widgets/slider2.dart';
+import 'package:app/widgets/slider3.dart';
 import 'package:app/widgets/verticle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -131,8 +134,8 @@ class userHomeState extends State<userHome> with TickerProviderStateMixin {
             height: 300,
             child: TabBarView(controller: _tabController, children: [
               simpleItems(),
-              Text("Hi"),
-              Text("asd"),
+              simpleItems2(),
+              simpleItems3(),
             ]),
           ),
           Container(
@@ -143,6 +146,18 @@ class userHomeState extends State<userHome> with TickerProviderStateMixin {
           ),
           buildVerticalList(),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.map_outlined,
+        ),
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) {
+              return MapPage();
+            },
+          ),
+        ),
       ),
     );
   }

@@ -4,6 +4,7 @@ import 'package:app/util/model/selectedPlace.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'dart:core';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -159,13 +160,13 @@ class _islandDetailsState extends State<islandDetails> {
                                   //       CrossAxisAlignment.start,
                                   //   children: <Widget>[
                                   Container(
-                                    padding: EdgeInsets.only(bottom: 10),
+                                    padding: EdgeInsets.only(top: 2, bottom: 5),
                                     width: 120,
                                     child: Text(
                                         widget.selectedCategory.subPlaces[index]
                                             .name,
                                         style: const TextStyle(
-                                            fontSize: 19.0,
+                                            fontSize: 18.0,
                                             fontWeight: FontWeight.w600)),
                                   ),
                                   // IconButton(
@@ -178,23 +179,32 @@ class _islandDetailsState extends State<islandDetails> {
                                   // ),
 
                                   Text(
-                                      "${widget.selectedCategory.subPlaces[index].rating} star rating",
+                                      "⭐ ${widget.selectedCategory.subPlaces[index].rating} star rating",
                                       style: const TextStyle(
                                           fontSize: 15.0,
                                           color: Colors.grey,
                                           fontWeight: FontWeight.w600)),
-                                  _buildRatingStars(widget.selectedCategory
-                                      .subPlaces[index].rating),
+                                  //_buildRatingStars(widget.selectedCategory.subPlaces[index].rating),
                                   const SizedBox(
-                                    height: 10.0,
+                                    height: 5.0,
                                   ),
+
                                   Text(
-                                    "${widget.selectedCategory.subPlaces[index].distance} Kilometers away",
-                                    style: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 16,
-                                    ),
-                                  ),
+                                      widget.selectedCategory.subPlaces[index]
+                                          .description,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: const TextStyle(
+                                          fontSize: 14.0,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.w600)),
+
+                                  // Text(
+                                  //   "${widget.selectedCategory.subPlaces[index].distance} Kilometers away",
+                                  //   style: const TextStyle(
+                                  //     color: Colors.grey,
+                                  //     fontSize: 16,
+                                  //   ),
+                                  // ),
                                 ]),
                           ),
                         ),

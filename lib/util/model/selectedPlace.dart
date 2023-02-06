@@ -8,8 +8,8 @@ class Category {
   final String imageUrl;
   final String location;
   final String description;
-  final int distance;
-  final int rating;
+  final double distance;
+  final double rating;
   final List<Category> subPlaces;
 
   Category({

@@ -1,3 +1,6 @@
+import 'package:app/pages/map.dart';
+import 'package:app/pages/selectedMap.dart';
+import 'package:app/util/model/saipan.dart';
 import 'package:app/util/model/selectedPlace.dart';
 import 'package:app/util/places.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +9,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class selectedDetails extends StatelessWidget {
   Category subCategory;
+  List<Category> categories = Saipan.getMockCategories();
   selectedDetails({
     super.key,
     required this.subCategory,
@@ -46,9 +50,8 @@ class selectedDetails extends StatelessWidget {
               ),
             ),
           ]),
-
-          // ),
           SizedBox(height: 20),
+          // ),
           ListView(
             padding: EdgeInsets.symmetric(horizontal: 20),
             primary: false,
@@ -59,6 +62,7 @@ class selectedDetails extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
+                    padding: EdgeInsets.only(top: 10),
                     alignment: Alignment.centerLeft,
                     child: Text(
                       this.subCategory.name,
@@ -70,12 +74,18 @@ class selectedDetails extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.map_outlined,
-                    ),
-                    onPressed: () {},
-                  ),
+                  // IconButton(
+                  //   icon: Icon(
+                  //     Icons.g,
+                  //   ),
+                  //   onPressed: () => Navigator.of(context).push(
+                  //     MaterialPageRoute(
+                  //       builder: (BuildContext context) {
+                  //         return MapPage();
+                  //       },
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
               Row(
@@ -102,7 +112,7 @@ class selectedDetails extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               // Container(
               //   alignment: Alignment.centerLeft,
               //   child: Text(
@@ -115,7 +125,7 @@ class selectedDetails extends StatelessWidget {
               //     textAlign: TextAlign.left,
               //   ),
               // ),
-              SizedBox(height: 40),
+
               Container(
                 alignment: Alignment.centerLeft,
                 child: const Text(
@@ -140,10 +150,22 @@ class selectedDetails extends StatelessWidget {
                   textAlign: TextAlign.left,
                 ),
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: 50.0),
             ],
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.map_outlined,
+        ),
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) {
+              return MapPage();
+            },
+          ),
+        ),
       ),
     );
   }

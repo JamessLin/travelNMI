@@ -9,8 +9,8 @@ class subPlaces extends Category {
       required String imageUrl,
       required String location,
       required String description,
-      required int distance,
-      required int rating,
+      required double distance,
+      required double rating,
 
       // required this.subPlaceName,
       // required this.subPlaceNameImageUrl,

@@ -1,3 +1,5 @@
+import 'package:app/pages/map.dart';
+import 'package:app/pages/selectedMap.dart';
 import 'package:app/util/places.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -66,12 +68,13 @@ class hotelDetails extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.map_outlined,
-                    ),
-                    onPressed: () {},
-                  ),
+                  // IconButton(
+                  //   icon: Icon(
+                  //     Icons.language_sharp,
+
+                  //   ),
+                  //   onPressed: () {},
+                  // ),
                 ],
               ),
               Row(
@@ -136,11 +139,24 @@ class hotelDetails extends StatelessWidget {
                   textAlign: TextAlign.left,
                 ),
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: 50.0),
             ],
           ),
+          SizedBox(height: 10.0),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(
+            Icons.map_outlined,
+          ),
+          onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) {
+              return MapPage();
+            },
+          ),
+        ),
+        ),
     );
   }
 

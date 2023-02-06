@@ -4,7 +4,7 @@ List places = [
   {
     "name": "Hyatt Regency Saipan",
     "img": "assets/images/Hotel/Hyatt.jpg",
-    "price": r"$183/night",
+    "price": r"$191/night",
     "location": "Saipan, MP",
     "details":
         "At Hyatt Regency Saipan, you can look forward to a roundtrip airport shuttle, a beach bar, and a poolside bar. This resort is a great place to bask in the sun with a white sand beach, beach umbrellas, and beach towels. Indulge in a Swedish massage, thalassotherapy, and a facial at the onsite spa. Be sure to enjoy a meal at any of the 4 onsite restaurants, which feature Italian cuisine and ocean views. Enjoy the gym, as well as activities like kayaking, snorkeling, and rowing/canoeing. Stay connected with free in-room WiFi, and guests can find other amenities such as a coffee shop/cafe and a garden."
@@ -12,7 +12,8 @@ List places = [
   {
     "name": "Saipan World Resort",
     "img": "assets/images/Hotel/world.jpg",
-    "price": r"$145/night",
+    "price": r"$175/night",
+    "lat" : "15.158984958076935, 145.70320922881365",
     "location": "Saipan, MP",
     "details":
         "Located close to LagoonSpa and Micro Beach, Saipan World Resort provides free water park access, a roundtrip airport shuttle, and a beach bar. This resort is a great place to bask in the sun with a white sand beach, sun loungers, and beach umbrellas. Be sure to enjoy a meal at Buffet world, the onsite buffet restaurant. Enjoy onsite activities like kayaking, windsurfing, and snorkeling. Free in-room WiFi is available to all guests, along with a grocery/convenience store and a terrace.",
@@ -20,7 +21,7 @@ List places = [
   {
     "name": "Pacific Island Club",
     "img": "assets/images/Hotel/pic.jpg",
-    "price": r"$151/night",
+    "price": r"$235/night",
     "location": "Saipan, MP",
     "details":
         "Located close to Coral Ocean Point Resort Club and Ladder Beach, Pacific Islands Club SAIPAN provides 18 holes of golf, a roundtrip airport shuttle, and a poolside bar. This hotel is a great place to bask in the sun with a private beach and beach towels. Be sure to enjoy a meal at any of the 4 onsite restaurants, which feature Asian cuisine and more. Free in-room WiFi is available to all guests, along with a grocery/convenience store and a terrace.",
